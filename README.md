@@ -231,7 +231,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
+        appear: AppBar(
           title: Text('Advanced Drawer Example'),
         ),
         drawer: Drawer(
@@ -241,15 +241,15 @@ class MyApp extends StatelessWidget {
               UserAccountsDrawerHeader(
                 accountName: Text('John Doe'),
                 accountEmail: Text('john.doe@example.com'),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor: Colors.orange,
+                current account picture: CircleAvatar(
+                  backgroundColor: Colors. orange,
                   child: Text(
                     'JD',
                     style: TextStyle(fontSize: 40.0),
                   ),
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors. blue,
                 ),
               ),
               ListTile(
@@ -268,7 +268,7 @@ class MyApp extends StatelessWidget {
               ),
               ListTile(
                 leading: Icon(Icons.contacts),
-                title: Text('Contact Us'),
+                title: Text('Contact Us),
                 onTap: () {
                   Navigator.pop(context);
                 },
@@ -289,10 +289,10 @@ class MyApp extends StatelessWidget {
 - The `Drawer` widget provides a sliding panel from the side of the screen.
 - It is typically used for navigation and menu options.
 - The `Drawer` is placed inside the `Scaffold` widget.
-- Customization options include headers, images, and different widgets inside the `Drawer`.
+- Customization options include headers, images, and widgets inside the `Drawer`.
 
 ### Additional Resources
-For more information and advanced usage, refer to the official Flutter documentation: [Flutter Drawer Documentation](https://flutter.dev/docs/cookbook/design/drawer).
+For more information and advanced usage, please take a look at the official Flutter documentation: [Flutter Drawer Documentation](https://flutter.dev/docs/cookbook/design/drawer).
 
 
 <div>
