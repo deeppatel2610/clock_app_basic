@@ -69,12 +69,12 @@ gifUdf()
 }
 
 List gif = [
-  'assets/img/1.gif',
+  'assets/img/1.jpg',
   'assets/img/2.jpg',
   'assets/img/3.jpg',
-  'assets/img/4.gif',
-  'assets/img/5.gif',
-  'assets/img/6.gif'
+  'assets/img/4.jpeg',
+  'assets/img/5.jpeg',
+  'assets/img/6.jpg',
 ];
 
 List days = [
