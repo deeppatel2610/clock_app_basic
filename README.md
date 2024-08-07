@@ -445,3 +445,120 @@ void main() {
   });
 }
 ```
+
+
+### 5.3
+
+Sure, here's a brief README file for the Digital Clock app:
+
+---
+
+# Digital Clock Flutter Application
+
+## Overview
+
+The Digital Clock is a simple Flutter application that displays the current time and date in a digital clock format. The clock updates every second and features an attractive background image. This app is built using Flutter, making it cross-platform and capable of running on both Android and iOS devices.
+
+## Features
+
+- **Live Time Update**: The clock updates every second, displaying the current hour, minute, and second.
+- **AM/PM Indicator**: The clock shows whether the current time is AM or PM.
+- **Date Display**: Below the clock, the current day of the week, day of the month, and month are displayed.
+- **Custom Background**: The clock is displayed over a background image that can be customized.
+- **Responsive Design**: The layout adjusts to different screen sizes, ensuring a consistent appearance across devices.
+
+## Getting Started
+
+### Prerequisites
+
+To run this application, you need to have Flutter installed on your machine. You can follow the official Flutter installation guide [here](https://flutter.dev/docs/get-started/install).
+
+### Installation
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/yourusername/digital_clock.git
+    cd digital_clock
+    ```
+
+2. **Install dependencies**:
+    ```sh
+    flutter pub get
+    ```
+
+3. **Run the app**:
+    ```sh
+    flutter run
+    ```
+
+## Code Explanation
+
+### Main Components
+
+- **DigitalClock**: This is the main widget that sets up the state for the digital clock.
+- **_DigitalClockState**: This stateful widget manages the clock's state and updates the time every second using a `Timer`.
+
+### Key Methods and Properties
+
+- `initState()`: Sets up a `Timer.periodic` to update the `dateTime` property every second.
+- `build(BuildContext context)`: Builds the UI, which includes the clock display and the background image.
+
+### UI Elements
+
+- **Background Image**: The background image is loaded using the `AssetImage` function. The `gifUdf()` function returns the path to the image.
+- **Clock Display**: The time is displayed using a `Row` widget, with the hour and minute separated from the seconds and AM/PM indicator.
+- **Date Display**: The date is displayed in a `Row` widget below the clock.
+
+## Customization
+
+### Background Image
+
+To change the background image, modify the `gifUdf()` function in the `../utils/global.dart` file to return the path of your desired image.
+
+### Time Format
+
+The current time format is 12-hour. To switch to a 24-hour format, you can adjust the logic in the `build` method:
+
+```dart
+Text(
+  '${dateTime.hour.toString().padLeft(2, '0')}:${dateTime.minute.toString().padLeft(2, '0')}',
+  style: const TextStyle(
+    color: Colors.white,
+    fontSize: 70,
+    fontWeight: FontWeight.bold,
+  ),
+),
+```
+
+### Colors and Fonts
+
+The text style can be customized by changing the `TextStyle` properties in the `build` method.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Contact
+
+For questions or suggestions, please contact [your email].
+
+---
+
+<div>
+   <img src= "https://github.com/user-attachments/assets/ba6240fe-03f8-4550-bdf0-f0bf52230332"  height =500px>
+   <img src= "https://github.com/user-attachments/assets/f359b802-713c-4740-9fda-9c866d68b5c5"  height =500px>
+  <img src= "https://github.com/user-attachments/assets/4a92a379-1fee-40a8-8e97-e4ab9c27a52d"  height =500px>
+  <img src= "https://github.com/user-attachments/assets/5918f263-4646-4c4b-8c8b-da92db7d0da6"  height =500px>
+   <img src= "https://github.com/user-attachments/assets/9ff04d9a-8600-43e0-8556-9dee73c1ad4f"  height =500px>
+    <img src= "https://github.com/user-attachments/assets/28cf41b2-5742-420e-8473-4ed7675504ae"  height =500px>
+   
+  
+  
+ 
+ 
+  
+  </div>
