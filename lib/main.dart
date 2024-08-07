@@ -1,3 +1,4 @@
+import 'package:clock_app_basic/screens/anloge_clock.dart';
 import 'package:clock_app_basic/screens/buttons.dart';
 import 'package:clock_app_basic/screens/digital_clock.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context)=>const DigitalClock(),
+        '/analog':(context)=>const AnalogClock(),
         '/button':(context)=>const Buttons()
       },
     );
