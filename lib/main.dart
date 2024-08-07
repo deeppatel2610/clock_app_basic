@@ -1,9 +1,10 @@
 import 'package:clock_app_basic/screens/buttons.dart';
+import 'package:clock_app_basic/screens/digital_clock.dart';
 import 'package:flutter/material.dart';
 
 void main()
 {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>const Buttons(),
+        '/':(context)=>const DigitalClock(),
+        '/button':(context)=>const Buttons()
       },
     );
   }
