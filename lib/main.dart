@@ -1,10 +1,10 @@
+import 'package:clock_app_basic/screens/Strap_clock.dart';
 import 'package:clock_app_basic/screens/anloge_clock.dart';
 import 'package:clock_app_basic/screens/buttons.dart';
 import 'package:clock_app_basic/screens/digital_clock.dart';
 import 'package:flutter/material.dart';
 
-void main()
-{
+void main() {
   runApp(const MyApp());
 }
 
@@ -16,9 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>const DigitalClock(),
-        '/analog':(context)=>const AnalogClock(),
-        '/button':(context)=>const Buttons()
+        '/': (context) => const DigitalClock(),
+        '/analog': (context) => const AnalogClock(),
+        '/button': (context) => const Buttons(),
+        '/strap': (context) => const StrapClock()
       },
     );
   }

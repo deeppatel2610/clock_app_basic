@@ -1,9 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 DateTime dateTime = DateTime.now();
 
 String img =
     "https://ask.libreoffice.org/uploads/asklibo/original/3X/3/5/35664d063435f940bda4cb3bb31ea0a6c5fed2f4.gif";
+
+String bgimg = 'assets/img/bgimg.jpeg';
 
 List drawerList = [
   {
@@ -100,3 +104,9 @@ List month = [
   'Nov',
   'Dec',
 ];
+
+int sec=0;
+int min=0;
+int hour=0;
+bool check=false;
+

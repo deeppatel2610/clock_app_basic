@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:clock_app_basic/utils/global.dart';
 import 'package:flutter/material.dart';
+import '../component/Button component/Row_udf.dart';
 import '../component/analog clock/stack_udf.dart';
 
 class AnalogClock extends StatefulWidget {
@@ -43,9 +44,16 @@ class _AnalogClockState extends State<AnalogClock> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          decoration: const BoxDecoration(color: Colors.black54),
+          decoration: const BoxDecoration(color: Colors.black38),
           child: analogClockUdf(),
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [Padding(
+          padding: const EdgeInsets.only(left: 30,bottom: 35),
+          child: buttonUdf(context),
+        ),],
       ),
     );
   }

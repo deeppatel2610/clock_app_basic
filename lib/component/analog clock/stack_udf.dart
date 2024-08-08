@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../../utils/global.dart';
+import '../digital clock/AM_and_PM.dart';
+import '../digital clock/weekday_and_month.dart';
 
 Stack analogClockUdf() {
   return Stack(
@@ -12,25 +14,35 @@ Stack analogClockUdf() {
         height: 250,
         width: 250,
         decoration: const BoxDecoration(
-            color: Color(0xff181625),
+            color: Colors.black38,
             shape: BoxShape.circle,
             // border: Border.all(color: Colors.black87,width: 1),
             boxShadow: [
-              BoxShadow(
-                  color: Colors.white, spreadRadius: 5, blurRadius: 18)
+              BoxShadow(color: Colors.black45, spreadRadius: 6, blurRadius: 6)
             ]),
       ),
       const CircleAvatar(
         radius: 2,
       ),
-      Text(
-        '${(dateTime.hour > 12) ? (dateTime.hour % 12).toString().padLeft(2, '0') : (dateTime.hour).toString().padLeft(2, '0')}:${dateTime.minute.toString().padLeft(2, '0')}',
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 70,
-          height: 18,
-          fontWeight: FontWeight.bold,
+      Padding(
+        padding: const EdgeInsets.only(right: 50),
+        child: Text(
+          '${(dateTime.hour > 12) ? (dateTime.hour % 12).toString().padLeft(2, '0') : (dateTime.hour).toString().padLeft(2, '0')}:${dateTime.minute.toString().padLeft(2, '0')}',
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 70,
+            height: -5.95,
+            fontWeight: FontWeight.bold,
+          ),
         ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(bottom: 417,left: 180),
+        child: Container(child: AM_And_PM_Udf()),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(bottom: 315),
+        child: Container(child: weekdayAndMonthUdf()),
       ),
       Transform.rotate(
         angle: (dateTime.second * 6) * pi / 180,
@@ -38,7 +50,7 @@ Stack analogClockUdf() {
           color: Colors.red,
           indent: 315,
           endIndent: 545,
-          thickness: 10,
+          thickness: 8,
         ),
       ),
       Transform.rotate(
@@ -51,7 +63,7 @@ Stack analogClockUdf() {
         ),
       ),
       Transform.rotate(
-        angle: (dateTime.hour * 30) * pi / 180,
+        angle: ((dateTime.hour * 30) + dateTime.minute * 0.5) * pi / 180,
         child: const VerticalDivider(
           color: Colors.white,
           indent: 380,
@@ -62,6 +74,16 @@ Stack analogClockUdf() {
       const CircleAvatar(
         radius: 5,
         backgroundColor: Color(0xff181625),
+      ),
+      ...List.generate(
+        60,
+        (index) => Transform.rotate(
+            angle: (index * 30) * pi / 180,
+            child: VerticalDivider(
+              thickness: 2,
+              indent: 309.5,
+              endIndent: 545,
+            ),),
       ),
     ],
   );

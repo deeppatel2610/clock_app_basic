@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../component/Button component/Row_udf.dart';
 import '../component/digital clock/digital_Time.dart';
 import '../component/digital clock/weekday_and_month.dart';
 import '../utils/global.dart';
@@ -37,35 +38,36 @@ class _DigitalClockState extends State<DigitalClock> {
             image: AssetImage(gifUdf()),
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(
-              flex: 1,
-            ),
-            digitalTime(),
-            weekdayAndMonthUdf(),
-            const Spacer(
-              flex: 3,
-            ),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/analog');
-              },
-              child: const Text(
-                'Next',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                ),
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(color: Colors.black38),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Spacer(
+                flex: 1,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            )
-          ],
+              digitalTime(),
+              weekdayAndMonthUdf(),
+              const Spacer(
+                flex: 3,
+              ),
+              const SizedBox(
+                height: 40,
+              )
+            ],
+          ),
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 30, bottom: 35),
+            child: buttonUdf(context),
+          ),
+        ],
       ),
     );
   }
