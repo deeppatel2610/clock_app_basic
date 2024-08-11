@@ -8,7 +8,7 @@ Row buttonUdf(BuildContext context) {
         padding: const EdgeInsets.all(4.0),
         child: GestureDetector(
           onTap: () {
-            Navigator.of(context).pushReplacementNamed('/');
+            Navigator.of(context).pushReplacementNamed('/digital');
           },
           child: Container(
             alignment: Alignment.center,
@@ -80,7 +80,7 @@ Row buttonUdf(BuildContext context) {
         padding: const EdgeInsets.all(4.0),
         child: GestureDetector(
           onTap: () {
-            Navigator.of(context).pushReplacementNamed('/');
+            Navigator.of(context).pushReplacementNamed('/timer');
           },
           child: Container(
             alignment: Alignment.center,

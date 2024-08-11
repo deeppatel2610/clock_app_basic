@@ -37,7 +37,7 @@ Stack analogClockUdf() {
         ),
       ),
       Padding(
-        padding: const EdgeInsets.only(bottom: 417,left: 180),
+        padding: const EdgeInsets.only(bottom: 417, left: 180),
         child: Container(child: AM_And_PM_Udf()),
       ),
       Padding(
@@ -47,7 +47,7 @@ Stack analogClockUdf() {
       Transform.rotate(
         angle: (dateTime.second * 6) * pi / 180,
         child: const VerticalDivider(
-          color: Colors.red,
+          color: Color(0xff3F8DCC),
           indent: 315,
           endIndent: 545,
           thickness: 8,
@@ -78,12 +78,13 @@ Stack analogClockUdf() {
       ...List.generate(
         60,
         (index) => Transform.rotate(
-            angle: (index * 30) * pi / 180,
-            child: VerticalDivider(
-              thickness: 2,
-              indent: 309.5,
-              endIndent: 545,
-            ),),
+          angle: (index * 30) * pi / 180,
+          child: const VerticalDivider(
+            thickness: 2,
+            indent: 309.5,
+            endIndent: 545,
+          ),
+        ),
       ),
     ],
   );

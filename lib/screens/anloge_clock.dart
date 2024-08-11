@@ -50,10 +50,15 @@ class _AnalogClockState extends State<AnalogClock> {
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Padding(
-          padding: const EdgeInsets.only(left: 30,bottom: 35),
-          child: buttonUdf(context),
-        ),],
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 30,
+              bottom: 20,
+            ),
+            child: buttonUdf(context),
+          ),
+        ],
       ),
     );
   }

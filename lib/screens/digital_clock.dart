@@ -64,7 +64,7 @@ class _DigitalClockState extends State<DigitalClock> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 30, bottom: 35),
+            padding: const EdgeInsets.only(left: 30, bottom: 20),
             child: buttonUdf(context),
           ),
         ],
